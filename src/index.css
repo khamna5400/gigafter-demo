@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* GigAfter Design System - Calm, Modern Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 98.04%;
+    --foreground: 0 0% 11.76%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 172 57% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 10% 96%;
+    --secondary-foreground: 220 10% 20%;
+
+    --muted: 40 10% 96%;
+    --muted-foreground: 215 13% 47%;
+
+    --accent: 40 15% 94%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 220 13% 18%;
+
+    --radius: 0.75rem;
+
+    /* Custom GigAfter tokens - Simplified */
+    --gig-accent: 172 57% 42%;
+    --gig-neutral: 220 10% 50%;
+    --gig-dark: 220 13% 18%;
+    
+    /* Gradients - Subtle and calm */
+    --gradient-text: linear-gradient(180deg, hsl(220 13% 18%) 0%, hsl(172 57% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 10% 98%) 100%);
+    
+    /* Shadows - Neutral, no color tinting */
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.03);
+    --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.05), 0 1px 3px hsl(0 0% 0% / 0.03);
+    --shadow-lg: 0 8px 30px hsl(0 0% 0% / 0.07), 0 2px 8px hsl(0 0% 0% / 0.03);
+    --shadow-xl: 0 20px 50px hsl(0 0% 0% / 0.1), 0 4px 16px hsl(0 0% 0% / 0.04);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.06), 0 1px 4px hsl(0 0% 0% / 0.03);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 220 13% 50%;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 40 10% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 40 10% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 40 10% 95%;
+
+    --primary: 40 10% 90%;
+    --primary-foreground: 220 15% 10%;
+
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 40 10% 90%;
+
+    --muted: 220 10% 18%;
+    --muted-foreground: 40 5% 55%;
+
+    --accent: 220 10% 15%;
+    --accent-foreground: 40 10% 85%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 40 10% 80%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1E1E1E;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .italic-text {
+    font-style: italic;
+    color: #6B7280;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .centered-text {
+    text-align: center;
+    color: #6B7280;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .glass-card {
+    background: hsl(var(--card));
+    box-shadow: 0 10px 40px hsl(0 0% 0% / 0.08), 0 2px 8px hsl(0 0% 0% / 0.04);
+  }
+}
